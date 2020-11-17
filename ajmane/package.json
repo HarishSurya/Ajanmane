@@ -6,6 +6,8 @@
   "main": "index.js",
   "scripts": {
     "build": "cd frontend && npm install && npm run build",
+    "install-frontend": "cd frontend && npm install",
+    "frontend": "cd frontend && npm start",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
     "heroku-postbuild": "npm run install-frontend && npm run build"
   },
