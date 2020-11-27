@@ -25,6 +25,7 @@ import SearchIcon from "@material-ui/icons/Search";
 function App() {
   const [searchKeyword, setSearchKeyword] = useState('');
   const [sortOrder, setSortOrder] = useState('');
+  const category = props.match.params.id ? props.match.params.id : '';
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
