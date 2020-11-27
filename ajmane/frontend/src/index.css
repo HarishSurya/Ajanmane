@@ -287,3 +287,11 @@ img.large {
   right: 0.5rem;
   top: 1.5rem;
 }
+.brandbtn {
+  font-size: 3rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
