@@ -29,6 +29,9 @@ function App() {
   const signoutHandler = () => {
     dispatch(signout());
   };
+  const closeMenu = () => {
+    document.querySelector('.sidebar').classList.remove('open');
+  };
   return (
     <BrowserRouter>
       <div className="grid-container">
