@@ -30,6 +30,10 @@ function App() {
   const signoutHandler = () => {
     dispatch(signout());
   };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(listProducts(category, searchKeyword, sortOrder));
+  };
   const openMenu = () => {
     document.querySelector('.sidebar').classList.add('open');
   };
@@ -48,8 +52,11 @@ function App() {
           </div>
     
     <div className="header__search">
+    <form onSubmit={submitHandler}>
         <input className="header__searchInput" type="text" />
         <SearchIcon className="header__searchIcon" />
+        <button type="submit">Search</button>
+    </form>
       </div>
     
     
