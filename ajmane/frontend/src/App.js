@@ -29,6 +29,9 @@ function App() {
   const signoutHandler = () => {
     dispatch(signout());
   };
+  const openMenu = () => {
+    document.querySelector('.sidebar').classList.add('open');
+  };
   const closeMenu = () => {
     document.querySelector('.sidebar').classList.remove('open');
   };
@@ -37,6 +40,7 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
+          <button onClick={openMenu}>&#9776;</button>
             <Link className="brand" to="/">
               ajjanamane
             </Link>
