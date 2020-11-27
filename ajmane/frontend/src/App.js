@@ -30,6 +30,13 @@ function App() {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(listProducts(category));
+
+    return () => {
+      //
+    };
+  }, [category]);
   const signoutHandler = () => {
     dispatch(signout());
   };
