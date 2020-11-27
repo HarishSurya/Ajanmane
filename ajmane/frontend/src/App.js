@@ -90,6 +90,23 @@ function App() {
             )}
           </div>
         </header>
+
+        <aside className="sidebar">
+          <h3>Shopping Categories</h3>
+          <button className="sidebar-close-button" onClick={closeMenu}>
+            x
+          </button>
+          <ul className="categories">
+            <li>
+              <Link to="/category/Pants">Pants</Link>
+            </li>
+
+            <li>
+              <Link to="/category/Shirts">Shirts</Link>
+            </li>
+          </ul>
+        </aside>
+        
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen} exact></Route>
