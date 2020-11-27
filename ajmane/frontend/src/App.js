@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { listProducts } from './actions/productActions';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { signout } from './actions/userActions';
 import AdminRoute from './components/AdminRoute';
@@ -22,29 +21,17 @@ import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import SearchIcon from "@material-ui/icons/Search";
 
-function App(props) {
-  const [searchKeyword, setSearchKeyword] = useState('');
-  const [sortOrder, setSortOrder] = useState('');
-  const category = props.match.params.id ? props.match.params.id : '';
+function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(listProducts(category));
-
-    return () => {
-      //
-    };
-  }, [category]);
+  
   const signoutHandler = () => {
     dispatch(signout());
   };
-  const submitHandler = (e) => {
-    e.preventDefault();
-    dispatch(listProducts(category, searchKeyword, sortOrder));
-  };
+  
   const openMenu = () => {
     document.querySelector('.sidebar').classList.add('open');
   };
@@ -63,11 +50,11 @@ function App(props) {
           </div>
     
     <div className="header__search">
-    <form onSubmit={submitHandler}>
+ 
         <input className="header__searchInput" type="text" />
-        <SearchIcon className="header__searchIcon" />
+      
         <button type="submit">Search</button>
-    </form>
+   
       </div>
     
     
