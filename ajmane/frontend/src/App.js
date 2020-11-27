@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { listProducts } from '../actions/productActions';
+import { listProducts } from './actions/productActions';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { signout } from './actions/userActions';
 import AdminRoute from './components/AdminRoute';
