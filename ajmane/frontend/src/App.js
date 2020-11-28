@@ -49,14 +49,15 @@ function App() {
             </Link>
           </div>
     
-    /*<div className="header__search">
+    {/*
+        <div className="header__search">
  
         <input className="header__searchInput" type="text" />
       <div className="searchbtn">
         <button type="submit">Search</button>
       </div>
       </div>
-    */
+    */}
     
           <div>
             <Link to="/cart">
