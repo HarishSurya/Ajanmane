@@ -266,7 +266,7 @@ img.large {
   position: fixed;
   transition: all 0.5s;
   transform: translateX(-30rem);
-  width: 30rem;
+  width: 25rem;
   background-color: #f0f0f0;
   height: 100%;
 }
