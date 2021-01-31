@@ -45,7 +45,7 @@ function App() {
           <div className="brandbtn">
           <button onClick={openMenu}>&#9776;</button>
             <Link className="brand" to="/">
-              Ajjanamane
+              Sai Ram Enterprises
             </Link>
           </div>
     
